@@ -226,3 +226,102 @@ library(aplpack)
 Class23 <- subset(ExampleData, ExampleData$CLASS == 23)$FINAL
 Class24 <- subset(ExampleData, ExampleData$CLASS == 24)$FINAL
 stem.leaf.backback(Class23,Class24)
+
+# side-by-side bar graph
+library(reshape2)
+library(ggplot2)
+library(scales)
+library(dplyr)
+data <- ExampleData
+data <- data %>% 
+  group_by( BASKETBALL,GENDER) %>% 
+  summarize(n = n())
+sum_by_basket <- data %>% summarize(total = sum(n))
+data <- data %>% ungroup()
+per <- data$n/26
+data$Percentage <- scales::percent(per)
+ggplot(data, aes(BASKETBALL, Percentage, fill=GENDER)) + 
+  geom_bar(position="dodge",stat="identity", width = 0.6)+
+  theme(axis.title=element_text(size=16,face="bold"),
+        axis.text = element_text(size = 12,face="bold" ))
+
+# stacked bar graph
+library(reshape2)
+library(ggplot2)
+library(scales)
+library(dplyr)
+data <- ExampleData
+data <- data %>% 
+  group_by( BASKETBALL,GENDER) %>% 
+  summarize(n = n())
+sum_by_basket <- data %>% summarize(total = sum(n))
+data <- data %>% ungroup()
+per <- data$n/26
+data$Percentage <- scales::percent(per)
+ggplot(data, aes(BASKETBALL, Percentage, fill=GENDER)) + 
+  geom_bar(position="stack",stat="identity", width = 0.5)+
+  theme(axis.title=element_text(size=16,face="bold"),
+        axis.text = element_text(size = 12,face="bold" ))
+
+# scatter plot
+ggplot(ExampleData, aes(x=MID, y=FINAL)) + 
+  geom_point(size = 3)+
+  theme(axis.title=element_text(size=16,face="bold"),
+        axis.text = element_text(size = 12,face="bold" ))
+# Linear regression lines
+setwd("C:/Users/leo/Documents/Teaching/Statistics/Teaching plans/Descriptional Statistics")
+Scores <- read.csv('Scores.csv')
+library(ggplot2)
+ggplot(Scores, aes(x=Calculus, y=Physics)) + 
+  geom_point(size = 3)+
+  theme(axis.title=element_text(size=16,face="bold"),
+        axis.text = element_text(size = 12,face="bold" ))
+# Visualizing the residuals
+model <- lm(Scores$Physics ~ Scores$Calculus)
+Scores$predicted <- predict(model)
+Scores$residuals <- residuals(model)
+  # take a quick look at the data
+  head(Scores)
+  #plot the actual and predicted values
+  ggplot(Scores, aes(x = Calculus, y = Physics))+ # set up the canvas
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  geom_segment(aes(xend = Calculus, yend = predicted)) +
+  geom_point(size = 3)+
+  geom_point(aes(y = predicted), size = 3, color = 'red', shape = 1)+  # Add the predicted values
+  theme(axis.title=element_text(size=16,face="bold"),
+        axis.text = element_text(size = 12,face="bold" ))
+# Least-squares regression line
+  ggplot(Scores, aes(x = Calculus, y = Physics)) + geom_point()+
+    geom_point(size = 3)+
+    geom_smooth(method = 'lm', size = 2, clolor = 'blue', se = FALSE)+
+    theme(axis.title=element_text(size=16,face="bold"),
+          axis.text = element_text(size = 12,face="bold"))
+# Summary of the above least squares regression line
+  summary(model)
+# Residual plot
+  ggplot(Scores, aes(x=Calculus, y= residuals)) +
+    geom_point(size = 3)+
+    theme(axis.title=element_text(size=16,face="bold"),
+          axis.text = element_text(size = 12,face="bold"))
+  
+  
+  
+  
+  
+  
+  
+# model 2
+model2 <- lm(ExampleData$FINAL~ExampleData$MID )
+ResidualFrame2 <- data.frame(MID = ExampleData$MID, Residuals = model2$residuals)
+ggplot(ResidualFrame2, aes(x = MID, y = Residuals)) 
+
+  
+?geom_smooth  
+  
+summary(model2)
+
+fit <- lm(mpg ~ hp, data = mtcars)  # Fit the model
+summary(fit)  # Report the results
+par(mfrow = c(2, 2))
+plot(fit)
+

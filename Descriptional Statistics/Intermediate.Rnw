@@ -40,4 +40,24 @@ Class23 <- subset(scores, scores$CLASS == 23)$FINAL
 Class24 <- subset(scores, scores$CLASS == 24)$FINAL
 stem.leaf.backback(Class23,Class24)
 @
+
+<<echo = FALSE, cache = TRUE>>=
+setwd("C:/Users/leo/Documents/Teaching/Statistics/Teaching plans/Descriptional Statistics")
+library(kableExtra)
+scores <- read.csv('Scores.csv', header = TRUE)
+scores$Gender <- NULL
+scores$Student.id <- NULL
+rownames(scores) <- scores$X
+scores$X.1 <- NULL
+scores$X <- NULL
+kable(scores, 'latex',align = 'c', booktabs = T, caption = 'Final scores') %>%
+  kable_styling(latex_options = c("striped", "hold_position"))
+@
+
+<<echo = FALSE, cache = TRUE>>=
+setwd("C:/Users/leo/Documents/Teaching/Statistics/Teaching plans/Descriptional Statistics")
+Scores <- read.csv('Scores.csv', header = TRUE)
+model <- lm(Scores$Physics ~ Scores$Calculus)
+summary(model)
+@
 \end{document}

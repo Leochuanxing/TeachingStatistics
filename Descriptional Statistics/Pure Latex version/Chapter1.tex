@@ -10,11 +10,23 @@
 \fancyfoot[LE,RO]{\thepage}
 % Supress the hyphenation
 \hyphenation{thatshouldnot}
+% for table and equations
 \usepackage{tablefootnote}
 \usepackage{amsmath,amsfonts,amsthm}
 \usepackage{multirow}
 \usepackage{hhline}
-
+% make a wide hat for the least-squares regression line
+ \usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
 
 
 \usepackage[]{graphicx}
@@ -571,7 +583,9 @@ For example, if figure \ref{BxoplotComparison} is given. We can say:
 \end{itemize}
 \section{The relation between two variables}
 \begin{itemize}
-\item \textbf{Two categorical variables}
+\item \textbf{The relation between two categorical variables}
+\vspace{0.6cm}
+
 By reading table \ref{ExampleData}, we may suspect that the is a relation between categorical variable \textit{BASKETALL} and \textit{GENDER}. Maybe boys are more likely to play basketball than girls. How can we describe the relation between  \textit{BASKETALL} and \textit{GENDER}?
 \begin{itemize}
 \item \textbf{Two-way table}
@@ -649,7 +663,279 @@ All the distributions are \textbf{marginal distribuions}, for we only consider t
 
 \textbf{Side-by-side bar graph} is a graph to show the relation between two categorical variables.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Side-by-sideBarGraph.png}
+\caption{Side-by-side bar graph of \textit{GENDER} and \textit{BASKETBALL}}
+\label{Side-by-sideBarGraph}
+\end{figure}
 
+\vspace{0.6cm}
+\item \textbf{Stacked bar graph}
+\vspace{0.6cm}
+
+\textbf{Stacked bar graph} can play the same role as side-by-side bar graph.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{StackedBarGraph.png}
+\caption{Stacked bar graph}
+\label{StackedBarGraph}
+\end{figure}
+\end{itemize}
+\item \textbf{The relation between two quantitative variables}
+\vspace{0.6cm}
+
+From table \ref{ExampleData}, we can see that if the scores of the \textit{MID} is higher, the scores of the \textit{FINAL} tend to be higher. How to describe the relation between those two quantitative variables?
+
+\begin{itemize}
+ \item \textbf{Scatter plot}
+ \vspace{0.6cm}
+ 
+ For each student we can get a two dimensional coordinates (\textit{MID},\textit{FINAL}). For example, the coordinates of 'James' is $(74, 86)$. If we draw all those coordinates out in a coordinates system, the graph is called \textbf{scatter plot}, as shown in figure \ref{ScatterPlot}.
+ 
+ \begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ScatterPlot.png}
+\caption{Scatter plot of \textit{FINAL} \textbf{vs} \textit{MID}}
+\label{ScatterPlot}
+\end{figure}
+
+\begin{itemize}
+ \item \textbf{Explanatory variable, Response variable}
+ \vspace{0.6cm}
+ 
+ If we want to use \textit{MID} to explain \textit{FINAL}, then \textit{MID} is called \textbf{explanatory variable} and \textit{FINAL} is called \textbf{response variable}. The explanatory variable goes to the x-axis and the response variable goes to the y-axis in the scatter plot.
+ \vspace{0.6cm}
+ 
+ \item \textbf{Direction}
+ \vspace{0.6cm}
+ 
+ The direction of a scatter plot gives a general trend, and can be described by terms \textbf{positive association} or \textbf{negative association}. If one variable increases while the other increases, those two variables have a positive association. If one variable increases while the other decreases, they have a negative association. \textit{FINAL} and \textit{MID} have a positive association according to figure \ref{ScatterPlot}.
+ 
+  \vspace{0.6cm}
+ 
+ \item \textbf{Form}
+ \vspace{0.6cm}
+ 
+We describe the form of a scatter plot by terms \textbf{linear} or \textbf{curved}. If the points in the scatter plot forms a linear pattern, the scatter plot has a linear form, otherwise a curved form. The scatter plot in figure \ref{ScatterPlot} has a  linear form.
+\vspace{0.6cm}
+
+\item \textbf{Strength}
+\vspace{0.6cm}
+
+Strength describes how strong is the form. Terms used to describe the strength are: \textbf{strong, moderate, weak}.
+The scatter plot in figure \ref{ScatterPlot} has a strong linear relation.
+\vspace{0.6cm}
+
+\item \textbf{Outliers}
+\vspace{0.6cm}
+
+Outliers are points don't follow the pattern of the majority either in the $\textbf{x}$ direction or in the $\textbf{y}$ direction. We modify figure \ref{ScatterPlot} a little bit as shown by figure \ref{ScatterPlotOutliers}. Point \textbf{A} and \textbf{B} are outliers in the $\textbf{x}$ direction and the $\textbf{y}$ direction  respectively.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ScatterPlotOutliers.png}
+\caption{Outliers of a scatter plot}
+\label{ScatterPlotOutliers}
+\end{figure}
+\end{itemize}
+ \item \textbf{Correlation} $\mathbf{r}$
+ \vspace{0.6cm}
+ 
+ Correlation r measures the strength and the direction of the linear relationship. Suppose $\{(x_1, y_1), (x_2, y_2), \cdots, (x_n, y_n\}$ are the data points, then
+ \begin{equation*}
+ \begin{split}
+ r&=\frac{1}{n-1}[(\frac{x_1-\bar{x}}{s_x}\frac{y_1-\bar{y}}{s_y}) + (\frac{x_2-\bar{x}}{s_x}\frac{y_2-\bar{y}}{s_y})+\cdots + (\frac{x_n-\bar{x}}{s_x}\frac{y_n-\bar{y}}{s_y})]\\
+ &= \frac{1}{n-1}\sum_{i=1}^n(\frac{x_i-\bar{x}}{s_x})(\frac{y_i-\bar{y}}{s_y})\\
+ &= \frac{1}{n-1}\sum_{i=1}^n z_{x_i}z_{y_i}
+ \end{split} 
+ \end{equation*}
+ \vspace{0.6cm}
+ 
+ \begin{itemize}
+  \item $\mathbf{r\in [-1, 1]}$
+  \vspace{0.6cm}
+  $r>0$ means there is a positive association. $r<0$ means there is a negative association.
+  \vspace{0.6cm}
+  
+  \item \textbf{Correlation r is the measurement of the strength of the linear relationship.}
+  \vspace{0.6cm}
+  If there is a linear relationship, $|r|$ is close to 1, means the linear relationship is strong. " $|r|$ is close to 1" itself can not guarantee there is a strong linear relation. There may be a curved relation with $|r|$ close to 1.
+  \vspace{0.6cm}
+  
+  $r = 0$ means there is no linear relation, but there may be a curved relationship. If there is a linear relation and $r = \pm 1$, the scatter plot is strictly linear.
+  \vspace{0.6cm}
+  
+  Correlation r only works on condition that there is a linear relationship. How can we tell there is a linear relationship? We will learn latter.
+   \vspace{0.6cm}
+   
+ \item \textbf{Correlation r doesn't imply causation}
+ \vspace{0.6cm}
+ 
+ \item \textbf{Correlation r only describes the relationship between two quantitative variables and has no unit.}   
+ \end{itemize} 
+\end{itemize}
+\vspace{0.6cm}
+
+\item \textbf{Least-squares regression}
+\vspace{0.6cm}
+
+Least-squares regression is a simple model of the relationship between two quantitative variables. It is simple, but it embodies the basic idea of modelling, which plays an important role in machine learning as well.
+\vspace{0.6cm}
+
+\begin{itemize}
+\item \textbf{Regression lines}
+\vspace{0.6cm}
+
+For convenience, we will use data in table \ref{SmallDataSet}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\rowcolors{2}{gray!6}{white}
+\begin{table}[H]
+\caption{\label{SmallDataSet} Small data set}
+\centering
+\begin{tabular}[t]{lcc}
+\hiderowcolors
+\toprule
+Name  & Calculus & Physics\\
+\midrule
+\showrowcolors
+James & 75 & 74\\
+Sam & 87 & 83\\
+Crystal & 88 & 92\\
+Evelyne & 84 & 82\\
+Phoebe & 89 & 86\\
+Vince & 76 & 85\\
+Mike & 71 & 76\\
+Lucy & 81 & 89\\
+Kitty & 86 & 91\\
+Owen & 88 & 82\\
+Angela & 96 & 93\\
+Christina & 87 & 81\\
+Jamie & 84 & 80\\
+Meggie & 80 & 82\\
+Kevin & 97 & 99\\
+Tom & 90 & 86\\
+John & 81 & 88\\
+Jason & 72 & 80\\
+\bottomrule
+\end{tabular}
+\end{table}
+\rowcolors{2}{white}{white}
+\end{knitrout}
+We want to know the relation between \textit{Calculus} and \textit{Physics}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{LinearRegressionLines.png}
+\caption{Linear regression lines}
+\label{LinearRegressionLines}
+\end{figure}
+A regression line is a line drawn to model the scatter plot. There may be more than one regression lines as shown in figure \ref{LinearRegressionLines}. We need to set up a criteria and find the best one according to this criteria.
+\vspace{0.6cm}
+
+\item \textbf{Criteria}
+   \vspace{0.6cm}
+      
+  \begin{itemize}
+   \item \textbf{Residuals}
+       \vspace{0.6cm}
+   
+   Suppose the equation for a regression line is  
+   $$\mathbf{\hat{y} = a + bx}.$$ 
+   $\mathbf{\hat{y}}$ represents the predicted value of \textit{Physics} and $\mathbf{x}$ represents \textit{Calculus}. Thus for each given value of \textit{Calculus}, we can find out a predicted value of \textit{Physics} by the equation of the regression line. Our prediction $\mathbf{\hat{y}}$ may be different from the observation $\mathbf{y}$. The difference is called \textbf{residual}.
+   $$\textbf{residual} = \mathbf{y - \hat{y}}$$
+  \begin{figure}[H]
+\hspace{3.5cm}
+\includegraphics[scale=0.8]{VisualizingResiduals.png}
+\caption{Visualizing residuals}
+\label{VisualizingResiduals}
+\end{figure}
+A visualization of the residuals is shown in figure \ref{VisualizingResiduals}, with black dots observations and red circles predicted value, and the vertical lines connecting the red circles and the black dots represents residuals.
+\vspace{0.6cm}
+
+\item \textbf{The criteria}
+\vspace{0.6cm}
+
+We want to find a line which minimizes the sum of the squares of the residuals: $$\Sigma (\mathbf{y - \hat{y}}^2).$$
+The line minimizes $\Sigma (\mathbf{y - \hat{y}}^2)$ is called \textbf{the least-squares regression line}
+\vspace{0.6cm}
+  \end{itemize}
+ \item \textbf{Least-squares regression line}
+ \begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.5]{LeastSquaresRegressionLine.png}
+ \vspace{0.3cm}
+ 
+ \includegraphics[scale=0.5]{SummaryLeastSquareRL.png}
+ \end{center}
+ \caption{Least-squares regression line}
+ \label{LeastSquaresRegressionLine}
+ \end{figure}
+Figure \ref{LeastSquaresRegressionLine} gives a graph and a summary of the least-squares regression line. Lets read the summary.
+\vspace{0.3cm}
+\begin{itemize}
+ \item \textbf{The equation $\mathbf{\hat{y} = a + bx}$}
+ \vspace{0.6cm}
+ 
+ In the summary, $\mathbf{a}$ is the estimated coefficient of the \texttt{Intercept}: \texttt{33.2622}, and $\mathbf{b}$ is the estimated coefficient of the \texttt{Calculus}: \texttt{0.6152}. Thus the equation of the least squares regression line is $$\reallywidehat{\textbf{Physics}} = 33.262 + 0.6152 \times \textbf{Calculus}$$
+ 
+The \textbf{intercept} $\mathbf{a}$ is interpreted as: when the scores of \textit{Calculus} is 0, the predicted value of \textit{Physics} is $33.3$ points. The \textbf{slope} $\mathbf{b}$ is interpreted as: when the scores of the \textit{Calculus} increases by 1 point, the scores of the \textit{Physics} will increase by 0.62 points.
+\vspace{0.6cm}
+
+Some formulas:
+$$\bar{y} = a + b\bar{x}$$
+$$b = r\frac{s_y}{s_x}$$
+$$\Sigma\textbf{residuals} = \Sigma(y-\hat{y})$$
+\colorbox{dollarbill}{Mathematical deduction for those formulas.}
+
+\colorbox{dollarbill}{Find the predicted \textit{Physics} and the residual of James }
+\vspace{0.6cm}
+\item \textbf{Standard deviation of the residuals: $\mathbf{S}$}
+
+
+\begin{equation*}
+\begin{split}
+S &= \Sigma(\textbf{residuals} - \textbf{mean of residuals})^2/(n-2)\\
+  &= \Sigma(y-\hat{y})^2/(n-2)
+\end{split}
+\end{equation*}
+\colorbox{babypink}{S gives the typical error of the predictions.}
+\vspace{0.6cm}
+\item \textbf{Coefficient of determination: $\mathbf{r^2}$}
+\vspace{0.6cm}
+
+Suppose we know nothing about the relationship between \textit{Calculus} and \textit{Physics}. For a given value of \textit{Calculus}, a reasonable prediction of the value of \textit{Physics} is its mean, since it is the center of \textit{Physics}. Now the variance of the predictions of all the students in table \ref{SmallDataSet} is given by 
+$$\frac{\Sigma(y-\bar{y})^2}{n-1}.$$
+Suppose we know the relation between \textit{Calculus} and \textit{Physics}, and the relation is given by the least-squares regression line. For a given value $\mathbf{x}$ of \textit{Calculus}, our predicted value $\hat{y}$ will be given by $\hat{y} = a + bx$. Now the variance of the predictions of all the students in table \ref{SmallDataSet} is given by 
+$$\frac{\Sigma(y-\hat{y})^2}{n-1} = \frac{\Sigma\text{residual}^2}{n-1} .$$
+The percentage of the variance of the predictions explained by the least-squares regression line is $$1-\frac{\Sigma\text{residual}^2}{n-1}\Bigg/\frac{\Sigma(y-\bar{y})^2}{n-1}$$
+This value is \textbf{the coefficient of determination}. Thus
+$$\mathbf{r^2} = 1- \frac{\Sigma\text{residual}^2}{\Sigma(y-\bar{y})^2}.$$
+\colorbox{babypink}{\parbox{13.2cm}{$\mathbf{r^2}$ gives the percentage of the the variance explained by the least-squares regression line.}}
+\vspace{0.6cm}
+
+\item \textbf{Residual plot}
+\vspace{0.6cm}
+
+Residual plot is a scatter plot to show the distributions of the residuals. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ResidualPlot.png}
+\caption{Residual plot}
+\label{ResidualPlot}
+\end{figure}
+Residual plot in figure \ref{ResidualPlot} is a scatter plot of residuals against the explanatory variable \textit{Calculus}.
+\vspace{0.6cm}
+
+The residual plot gives us information about whether there is any "left-over" pattern after the response variable is explained by our model. If there is no left-over pattern in the residual plot and the residuals are randomly scattered around 0, our model is appropriate. In figure \ref{ResidualPlot}, there is no left-over pattern and the residuals is randomly scattered around 0. Thus the linear model is appropriate for the relationship between \textit{Physics} and \textit{Calculus}.
+\vspace{0.6cm}
+
+\colorbox{babypink}{\parbox{13.2cm}{Residual plot gives us information about whether a model is appropriate.}}
+\end{itemize}
+\vspace{0.6cm}
+
+\item \textbf{Transform to achieve linearity}
 \end{itemize}
 \end{itemize}
 \end{document}
