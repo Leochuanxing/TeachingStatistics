@@ -214,6 +214,28 @@ ggplot(ExampleData, aes(x = helper, y = FINAL))+
         axis.text.y = element_blank(),
         axis.title.x=element_text(size=16,face="bold"),
         axis.text.x = element_text(size = 12,face="bold" ))
+
+#Normal distribution
+library(ggrepel)
+p1 <- ggplot(data.frame(x = c(-5, 5)), aes(x)) + stat_function(fun = dnorm, size = 1)+
+  stat_function(fun = function(x){0}, size = 1) +
+  theme(axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.title.x = element_text(size = 14, face = 'bold'),
+        axis.text.x = element_text(size = 12, face = 'bold'),
+        axis.ticks.x = element_line(size=1,color='black'),
+        axis.ticks.length = unit(-0.1, 'cm'))+
+        ylim(0,0.43)
+# add special tick mark
+p2 <- p1 +scale_x_continuous(breaks=c(-3, -2, -1, 0, 1, 2, 3), 
+                       labels = c(expression(mu - 3 *sigma), expression(mu - 2 *sigma),expression(mu - sigma), expression(mu),
+                                  expression(mu + sigma), expression(mu + 2 *sigma), expression(mu + 3 *sigma)))
+# add annotation
+p3 <- p2  + annotate("text", x=3.2, y=0.3, label = "f(x)==frac(1, sqrt(2*pi*sigma))~plain(e)^{frac(-(x-mu)^2, 2*sigma^2)}",
+                   parse=TRUE, cex = 9) 
+   
+p3
+
 # Boxplot of two distributions
 library(ggplot2)
 ExampleData$CLASS <- as.factor(ExampleData$CLASS)
@@ -264,11 +286,6 @@ ggplot(data, aes(BASKETBALL, Percentage, fill=GENDER)) +
         axis.text = element_text(size = 12,face="bold" ))
 
 # scatter plot
-ggplot(ExampleData, aes(x=MID, y=FINAL)) + 
-  geom_point(size = 3)+
-  theme(axis.title=element_text(size=16,face="bold"),
-        axis.text = element_text(size = 12,face="bold" ))
-# Linear regression lines
 setwd("C:/Users/leo/Documents/Teaching/Statistics/Teaching plans/Descriptional Statistics")
 Scores <- read.csv('Scores.csv')
 library(ggplot2)
@@ -276,6 +293,7 @@ ggplot(Scores, aes(x=Calculus, y=Physics)) +
   geom_point(size = 3)+
   theme(axis.title=element_text(size=16,face="bold"),
         axis.text = element_text(size = 12,face="bold" ))
+
 # Visualizing the residuals
 model <- lm(Scores$Physics ~ Scores$Calculus)
 Scores$predicted <- predict(model)

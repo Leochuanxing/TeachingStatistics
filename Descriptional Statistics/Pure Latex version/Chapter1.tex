@@ -27,8 +27,9 @@
 }{0.5ex}}%
 \stackon[1pt]{#1}{\tmpbox}%
 }
+\usepackage[shortlabels]{enumitem}
 
-
+% knitr packages
 \usepackage[]{graphicx}
 \usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
@@ -530,6 +531,61 @@ $$a\mathbf{X} = \{ax_1, ax_2, \cdots, ax_n\}.$$
 \end{itemize}
 \colorbox{dollarbill}{Calculate the mean and standard deviation of the z-scores for any give data set.}
 \end{itemize}
+\section{Normal distribution}
+The \textbf{normal distribution} is one of the most important distributions in statistics. A lot of natural phenomena follow the normal distribution, such as the error of repeated measurements. The \textbf{central limit theorem} makes it more powerful, which says: the sampling distribution of sample mean approaches normal distribution as the sample size increases. Normal distribution is also called \textbf{Gaussian distribution}.
+\vspace{0.6cm}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{NormalDistribution.png}
+\caption{Normal Distribution with mean $\mu$ and standard deviation $\sigma$}
+\label{NormalDistribution}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Notation}
+\vspace{0.6cm}
+
+Figure \ref{NormalDistribution}, gives the density curve of a normal distribution with mean $\mu$ and standard deviation $\sigma$, and the normal distribution is completely decided by those two parameters. $\mathcal{X}$ follows a normal distribution with mean $\mu$ and standard deviation $\sigma$ is denoted as $\mathcal{X}\sim \mathcal{N}(\mu, \sigma)$.
+\vspace{0.6cm}
+
+\item \textbf{The 68-95-99.7 rule}
+\vspace{0.6cm}
+
+The density curve of the normal distribution is symmetric and bell-shaped, with mean equal to median. The total area under the curve and above the horizontal axis is 1. There is an empirical rule for the areas as shown in figure \ref{68-95-99.7Rule}. It is called the \textbf{The 68-95-99.7 rule}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{68-95-997Rule.png}
+\caption{The 68-95-99.7 rule}
+\label{68-95-99.7Rule}
+\end{figure}
+
+By this rule, we can give some estimations about the parameters $\mu$ and $\sigma$ of the normal distributions. 
+
+\colorbox{dollarbill}{\parbox{15.2cm}{exercise}}.
+\vspace{0.6cm}
+
+\item \textbf{Standard normal distribution}
+\vspace{0.6cm}
+
+Suppose $X \sim \mathcal{N}(\mu, \sigma)$, Let $Z$ be the set of all z-scores of $X$
+$$Z=\frac{X - \mu}{\sigma}. $$
+Then $Z$ is normally distributed, with mean $\mu_Z$ and standard deviation $\sigma_Z$. According to the knowledge of data transformation: $\mu_Z = 0$, $\sigma_Z = 1$. Thus, $$Z \sim \mathcal{N}(0, 1)$$
+$\mathcal{N}(0, 1)$ is called \textbf{standard normal distribution}.
+\vspace{0.6cm}
+
+
+Suppose the percentage of the data less than $x$ is give by $P(X<x)$, which equals to the area to the left side of $x$ under the density curve. We have the following equations:
+$$P(X<x)= P(\frac{X-\mu}{\sigma}<\frac{x-\mu}{\sigma}) = P(Z<z_x).$$
+
+\colorbox{babypink}{\parbox{15.2cm}{If we known the standard normal distribution of $Z$, we know all the normal distributions.}}
+
+\colorbox{dollarbill}{\parbox{15.2cm}{exercise}}.
+\end{itemize}
+
+
+
 \section{Comparing distributions}
 \begin{itemize}
 \item \textbf{Perspectives to describe a distribution}
@@ -684,15 +740,49 @@ All the distributions are \textbf{marginal distribuions}, for we only consider t
 \end{figure}
 \end{itemize}
 \item \textbf{The relation between two quantitative variables}
-\vspace{0.6cm}
 
-From table \ref{ExampleData}, we can see that if the scores of the \textit{MID} is higher, the scores of the \textit{FINAL} tend to be higher. How to describe the relation between those two quantitative variables?
+For convenience, we will use data in table \ref{SmallDataSet}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\rowcolors{2}{gray!6}{white}
+\begin{table}[H]
+\caption{\label{SmallDataSet} Small data set}
+\centering
+\begin{tabular}[t]{lcc}
+\hiderowcolors
+\toprule
+Name  & Calculus & Physics\\
+\midrule
+\showrowcolors
+James & 75 & 74\\
+Sam & 87 & 83\\
+Crystal & 88 & 92\\
+Evelyne & 84 & 82\\
+Phoebe & 89 & 86\\
+Vince & 76 & 85\\
+Mike & 71 & 76\\
+Lucy & 81 & 89\\
+Kitty & 86 & 91\\
+Owen & 88 & 82\\
+Angela & 96 & 93\\
+Christina & 87 & 81\\
+Jamie & 84 & 80\\
+Meggie & 80 & 82\\
+Kevin & 97 & 99\\
+Tom & 90 & 86\\
+John & 81 & 88\\
+Jason & 72 & 80\\
+\bottomrule
+\end{tabular}
+\end{table}
+\rowcolors{2}{white}{white}
+\end{knitrout}
+From the table we may have a feeling about the "positive association" between \textit{Calculus} and \textit{Physics}. But how to describe this relationship? 
 
 \begin{itemize}
  \item \textbf{Scatter plot}
  \vspace{0.6cm}
  
- For each student we can get a two dimensional coordinates (\textit{MID},\textit{FINAL}). For example, the coordinates of 'James' is $(74, 86)$. If we draw all those coordinates out in a coordinates system, the graph is called \textbf{scatter plot}, as shown in figure \ref{ScatterPlot}.
+ For each student we can get a two dimensional coordinates (\textit{Calculus},\textit{Physics}). For example, the coordinates of 'James' is $(75, 74)$. If we draw all those coordinates out in a coordinates system, the graph is called \textbf{scatter plot}, as shown in figure \ref{ScatterPlot}.
  
  \begin{figure}[H]
 \centering
@@ -761,10 +851,11 @@ Outliers are points don't follow the pattern of the majority either in the $\tex
   
   \item \textbf{Correlation r is the measurement of the strength of the linear relationship.}
   \vspace{0.6cm}
-  If there is a linear relationship, $|r|$ is close to 1, means the linear relationship is strong. " $|r|$ is close to 1" itself can not guarantee there is a strong linear relation. There may be a curved relation with $|r|$ close to 1.
+  
+  If there is a linear relationship, $|r|$ is close to 1, means the linear relationship is strong. " $|r|$ is close to 1" itself can not guarantee there is a linear relation. There may be a curved relation with $|r|$ close to 1.
   \vspace{0.6cm}
   
-  $r = 0$ means there is no linear relation, but there may be a curved relationship. If there is a linear relation and $r = \pm 1$, the scatter plot is strictly linear.
+  $r = 0$ means there is no linear relation, but there may be a curved relationship. If  $r = \pm 1$, the scatter plot is strictly linear.
   \vspace{0.6cm}
   
   Correlation r only works on condition that there is a linear relationship. How can we tell there is a linear relationship? We will learn latter.
@@ -788,42 +879,7 @@ Least-squares regression is a simple model of the relationship between two quant
 \item \textbf{Regression lines}
 \vspace{0.6cm}
 
-For convenience, we will use data in table \ref{SmallDataSet}.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\rowcolors{2}{gray!6}{white}
-\begin{table}[H]
-\caption{\label{SmallDataSet} Small data set}
-\centering
-\begin{tabular}[t]{lcc}
-\hiderowcolors
-\toprule
-Name  & Calculus & Physics\\
-\midrule
-\showrowcolors
-James & 75 & 74\\
-Sam & 87 & 83\\
-Crystal & 88 & 92\\
-Evelyne & 84 & 82\\
-Phoebe & 89 & 86\\
-Vince & 76 & 85\\
-Mike & 71 & 76\\
-Lucy & 81 & 89\\
-Kitty & 86 & 91\\
-Owen & 88 & 82\\
-Angela & 96 & 93\\
-Christina & 87 & 81\\
-Jamie & 84 & 80\\
-Meggie & 80 & 82\\
-Kevin & 97 & 99\\
-Tom & 90 & 86\\
-John & 81 & 88\\
-Jason & 72 & 80\\
-\bottomrule
-\end{tabular}
-\end{table}
-\rowcolors{2}{white}{white}
-\end{knitrout}
-We want to know the relation between \textit{Calculus} and \textit{Physics}. 
+ 
 
 \begin{figure}[H]
 \centering
@@ -932,10 +988,70 @@ The residual plot gives us information about whether there is any "left-over" pa
 \vspace{0.6cm}
 
 \colorbox{babypink}{\parbox{13.2cm}{Residual plot gives us information about whether a model is appropriate.}}
+\vspace{0.6cm}
+
+\item \textbf{Extrapolation  and influential points}
+\vspace{0.6cm}
+
+\textbf{Extrapolation} is the use of the regression line to predict the response values based on the explanatory values far out of the range from which we obtain the regression line. For the linear regression in figure \ref{LeastSquaresRegressionLine}, if a give \textit{Calculus} score is 0, the predicted value for \textit{Physics} is 33.3. 
+
+
+\colorbox{babypink}{\parbox{13.2cm}{We have to watch out for those extrapolations. Most of the time they are not accurate.}}
+\vspace{0.6cm}
+
+An \textbf{influential point} is the point that can markedly influence the result of the least-squares regression line if it is removed. 
+
+\colorbox{babypink}{\parbox{13.2cm}{Outliers in the x direction are often influential.}}
+\vspace{0.6cm}
+\vspace{0.6cm}
 \end{itemize}
 \vspace{0.6cm}
 
+
 \item \textbf{Transform to achieve linearity}
+\vspace{0.6cm}
+
+Linear regression can describe some curved relationships after some transformation.
+\vspace{0.6cm}
+
+\begin{itemize}
+ \item \textbf{Exponential}
+ \vspace{0.6cm}
+ 
+ The exponential model is given by $$\mathbf{y=ab^x, \hspace{0.3cm} a\; \text{and}\; b \text{ are constant}.}$$ 
+ Now we take natural log of both sides:$$\mathbf{\ln y = \ln(ab^x) = \ln a + (\ln b)\; x}.$$
+Thus, $\ln y $ and $x$ has a linear relationship, with intercept $\ln a$ and slope $\ln b$.
+\vspace{0.6cm}
+
+\item \textbf{Power model}
+\vspace{0.6cm}
+
+The power model is given by
+$$\mathbf{y=ax^b, \hspace{0.3cm} a\; \text{and}\; b \text{ are constant}.}$$ 
+Now we take natural log of both sides:$$\mathbf{\ln y = \ln(ax^b) = \ln a +  b\;\ln x}.$$
+Thus $\ln y $  and $\ln x $ has a linear relationship, with intercept $\mathbf{\ln a}$ and slope $\mathbf{b}$.
+\end{itemize}
+\vspace{0.6cm}
+
+Sometimes, we don't know whether it is a power model or an exponential model. We can draw two scatter plots to show the relationship of $\mathbf{\ln y \sim \ln x} $ and $\mathbf{\ln y \sim x}$, to see which one
+ is more linear.
+ \vspace{0.6cm}
+ 
+\textbf{Example:}
+ \vspace{0.6cm}
+
+Here is the data for the nine planets in figure \ref{Planets}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Planets.png}
+\caption{Data for the nine planets (\textit{Adapted from 'The practice of statistics'})}
+\label{Planets}
+\end{figure}
+\begin{enumerate}[(1)]
+\item Is power model or exponential model more appropriate to for the relationship of \textbf{Period} $\sim$ \textbf{Distance}?
+\item If a new planet called Eris is discovered with distance 102.15 AU, what is the period?
+\end{enumerate}
 \end{itemize}
 \end{itemize}
 \end{document}
