@@ -1,0 +1,290 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+
+% packages will be used by the 'kable' package
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl} 
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning: package 'kableExtra' was built under R version 3.4.4}}\end{kframe}\rowcolors{2}{gray!6}{white}
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-1}Final scores}
+\centering
+\begin{tabular}[t]{cccccc}
+\hiderowcolors
+\toprule
+X & CLASS & GENDER & MID & FINAL & BASKETBALL\\
+\midrule
+\showrowcolors
+James & 23 & M & 74 & 86 & N\\
+Andrew & 23 & M & 74 & 86 & Y\\
+Jim & 23 & M & 23 & 47 & Y\\
+Kim & 23 & M & 61 & 78 & Y\\
+Mark & 23 & M & 97 & 98 & N\\
+\addlinespace
+Owen & 23 & M & 73 & 85 & Y\\
+Cook & 23 & M & 98 & 99 & Y\\
+Albert & 23 & M & 81 & 90 & Y\\
+Donald & 23 & M & 70 & 84 & N\\
+Peter & 23 & M & 53 & 72 & Y\\
+\addlinespace
+Vince & 23 & M & 68 & 82 & Y\\
+Davis & 23 & M & 83 & 91 & Y\\
+Alan & 23 & M & 82 & 90 & Y\\
+Nick & 23 & M & 64 & 80 & N\\
+Elina & 23 & F & 72 & 85 & N\\
+\addlinespace
+Daisy & 23 & F & 68 & 82 & Y\\
+Crystal & 23 & F & 53 & 72 & N\\
+Karida & 23 & F & 66 & 81 & N\\
+Linda & 23 & F & 83 & 91 & N\\
+Dale & 23 & F & 70 & 83 & Y\\
+\addlinespace
+Sandy & 23 & F & 56 & 74 & N\\
+Emma & 23 & F & 65 & 80 & N\\
+Angela & 23 & F & 72 & 85 & N\\
+Katie & 23 & F & 84 & 91 & N\\
+Eileen & 23 & F & 73 & 85 & N\\
+\addlinespace
+Meggie & 23 & F & 68 & 82 & N\\
+Jack & 24 & M & 45 & 67 & Y\\
+Stan & 24 & M & 23 & 47 & Y\\
+Ryan & 24 & M & 60 & 77 & Y\\
+Murphy & 24 & M & 36 & 60 & N\\
+\addlinespace
+Mike & 24 & M & 82 & 90 & Y\\
+Antony & 24 & M & 18 & 42 & Y\\
+Clare & 24 & M & 86 & 93 & Y\\
+David & 24 & M & 83 & 91 & Y\\
+Taylor & 24 & M & 69 & 83 & Y\\
+\addlinespace
+Park & 24 & M & 78 & 88 & N\\
+Gary & 24 & M & 51 & 71 & Y\\
+Carson & 24 & M & 85 & 92 & Y\\
+Elvis & 24 & M & 25 & 49 & Y\\
+Kelly & 24 & F & 59 & 76 & N\\
+\addlinespace
+Sara & 24 & F & 77 & 88 & N\\
+Cherry & 24 & F & 61 & 78 & N\\
+Lucy & 24 & F & 54 & 73 & Y\\
+Hellen & 24 & F & 46 & 68 & N\\
+Chloe & 24 & F & 95 & 97 & Y\\
+\addlinespace
+Dorothy & 24 & F & 82 & 90 & N\\
+Natalie & 24 & F & 73 & 85 & N\\
+Vivien & 24 & F & 76 & 87 & N\\
+Cathy & 24 & F & 70 & 84 & N\\
+Carol & 24 & F & 55 & 74 & N\\
+\addlinespace
+Bella & 24 & F & 96 & 98 & Y\\
+Veronica & 24 & F & 60 & 77 & N\\
+\bottomrule
+\end{tabular}
+\end{table}
+\rowcolors{2}{white}{white}
+
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   42.00   75.50   83.50   80.46   90.00   99.00
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## _____________________________________
+##   1 | 2: represents 12, leaf unit: 1 
+##         Class23       Class24    
+## LO: 47                LO: 42 47 49   
+## _____________________________________
+##                |  6* |0          4   
+##                |  6. |78         6   
+##    4        422|  7* |134        9   
+##    5          8|  7. |6778      (4)  
+##   (8)  43222100|  8* |34        (2)  
+##   (6)    665555|  8. |5788      11   
+##    7      11100|  9* |00123      7   
+##    2         98|  9. |78         2   
+##                | 10* |               
+## _____________________________________
+## n:           26       26         
+## _____________________________________
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\rowcolors{2}{gray!6}{white}
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-4}Final scores}
+\centering
+\begin{tabular}[t]{lcc}
+\hiderowcolors
+\toprule
+  & Calculus & Physics\\
+\midrule
+\showrowcolors
+James & 75 & 74\\
+Sam & 87 & 83\\
+Crystal & 88 & 92\\
+Evelyne & 84 & 82\\
+Phoebe & 89 & 86\\
+\addlinespace
+Vince & 76 & 85\\
+Mike & 71 & 76\\
+Lucy & 81 & 89\\
+Kitty & 86 & 91\\
+Owen & 88 & 82\\
+\addlinespace
+Angela & 96 & 93\\
+Christina & 87 & 81\\
+Jamie & 84 & 80\\
+Meggie & 80 & 82\\
+Kevin & 97 & 99\\
+\addlinespace
+Tom & 90 & 86\\
+John & 81 & 88\\
+Jason & 72 & 80\\
+\bottomrule
+\end{tabular}
+\end{table}
+\rowcolors{2}{white}{white}
+
+
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = Scores$Physics ~ Scores$Calculus)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7901 -3.5787 -0.7151  4.7675  6.0577 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)      33.2662    12.4828   2.665 0.016944 *  
+## Scores$Calculus   0.6152     0.1481   4.155 0.000746 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 4.491 on 16 degrees of freedom
+## Multiple R-squared:  0.519,	Adjusted R-squared:  0.4889 
+## F-statistic: 17.26 on 1 and 16 DF,  p-value: 0.0007456
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+       1 | 2: represents 12 
+             4* | 2
+             4. | 779
+             5* |
+             5. |             
+             6* | 0
+             6. | 78
+             7* | 122344
+             7. | 67788
+             8* | 0012223344
+             8. | 5555566788
+             9* | 0000111123
+             9. | 7889
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+       1 | 2: represents 12 
+             4  | 2779
+             5  |             
+             6  | 078
+             7  | 12234467788 
+             8  | 00122233445555566788
+             9  | 00001111237889 
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\end{document}

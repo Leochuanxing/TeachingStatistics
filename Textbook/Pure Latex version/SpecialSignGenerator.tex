@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{stackengine}
+\newcommand{\textyen}{\stackengine{-4pt}{=}{\textbf{Y}}{O}{c}{F}{T}{S}}
+
+\usepackage[table]{xcolor}
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+
+ \usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+
+\begin{document}
+
+\textyen
+
+\begin{table}[!h]
+\rowcolors{2}{gray!6}{white}
+\caption{\label{SmallDataSet} Small data set}
+\centering
+\begin{tabular}[t]{lcc}
+\hline
+\hiderowcolors
+Name  & Calculus & Physics\\
+\hline
+\showrowcolors
+James & 75 & 74\\
+Sam & 87 & 83\\
+Crystal & 88 & 92\\
+Evelyne & 84 & 82\\
+Phoebe & 89 & 86\\
+Vince & 76 & 85\\
+Mike & 71 & 76\\
+Lucy & 81 & 89\\
+Kitty & 86 & 91\\
+Owen & 88 & 82\\
+Angela & 96 & 93\\
+Christina & 87 & 81\\
+Jamie & 84 & 80\\
+Meggie & 80 & 82\\
+Kevin & 97 & 99\\
+Tom & 90 & 86\\
+John & 81 & 88\\
+Jason & 72 & 80\\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+$$\reallywidehat{p} \sim N(p, \sqrt{\frac{p(1-p)}{n}})$$
+$$\mathbf{\alpha}$$
+$$\mathbf{\alpha}/2$$
+\end{document}
