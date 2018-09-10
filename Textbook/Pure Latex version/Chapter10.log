@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.11.12)  9 SEP 2018 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.11.12)  10 SEP 2018 21:20
 entering extended mode
-**./Chapter8.tex
-(Chapter8.tex
+**./Chapter10.tex
+(Chapter10.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
@@ -1009,8 +1009,8 @@ Package: l3keys2e 2017/12/16 LaTeX2e option processing using LaTeX3 keys
 (C:\Users\leo\AppData\Roaming\MiKTeX\2.9\tex\latex\translator\translator.sty
 Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
 ))
-(Chapter8.aux)
-\openout1 = `Chapter8.aux'.
+(Chapter10.aux)
+\openout1 = `Chapter10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
 LaTeX Font Info:    ... okay on input line 131.
@@ -1136,55 +1136,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathtt_int=\count326
 
 Chapter 1.
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 141.
-
-
-LaTeX Font Warning: Command \large invalid in math mode on input line 141.
-
 [1
 
 
 {C:/Users/leo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 167.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
 \tmpboxcontent=\box89
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2] <HypothesisTestSamplingDistribution.png, id=19, 419.06563pt x 295.60437pt>
-File: HypothesisTestSamplingDistribution.png Graphic file (type png)
-
-<use HypothesisTestSamplingDistribution.png>
-Package pdftex.def Info: HypothesisTestSamplingDistribution.png used on input l
-ine 207.
-(pdftex.def)             Requested size: 251.4413pt x 177.36398pt.
-
-Overfull \hbox (3.1151pt too wide) in paragraph at lines 220--220
-[]\OT1/cmr/m/n/12 Set sig-nif-i-cance
+Overfull \hbox (11.14043pt too wide) in paragraph at lines 196--197
+[][] 
  []
 
 
-Overfull \hbox (7.05017pt too wide) in paragraph at lines 220--220
-\OT1/cmr/m/n/12 Is the $[]$ far away
- []
-
-
-Overfull \hbox (14.2122pt too wide) in paragraph at lines 220--220
-\OT1/cmr/m/n/12 case of ``fair coin''
+Overfull \hbox (5.3998pt too wide) detected at line 203
+\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = [] + [] + [] + [] + [] = 26\OML/cmm/m/it
+/12 :\OT1/cmr/m/n/12 1
  []
 
 
@@ -1193,16 +1169,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./HypothesisTestSamplingDistribution.png>]
-<OneSidedHT.png, id=25, 411.5375pt x 279.0425pt>
-File: OneSidedHT.png Graphic file (type png)
- <use OneSidedHT.png>
-Package pdftex.def Info: OneSidedHT.png used on input line 233.
-(pdftex.def)             Requested size: 246.92441pt x 167.42679pt.
-
-Overfull \hbox (11.50136pt too wide) in paragraph at lines 241--241
-[]\OT1/cmr/m/n/12 Set sig-nif-i-cance level
+[2]
+Overfull \hbox (6.21762pt too wide) in paragraph at lines 207--208
+\OT1/cmr/m/n/12 in favour of $[][]$? 
  []
+
+<Chi-squareDistribution.png, id=19, 348.80313pt x 261.97874pt>
+File: Chi-squareDistribution.png Graphic file (type png)
+
+<use Chi-squareDistribution.png>
+Package pdftex.def Info: Chi-squareDistribution.png used on input line 214.
+(pdftex.def)             Requested size: 209.2835pt x 157.18845pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1210,60 +1187,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4 <./OneSidedHT.png>] <PvalueTwoSided.png, id=30, 389.95688pt x 270.00874pt>
-File: PvalueTwoSided.png Graphic file (type png)
-
-<use PvalueTwoSided.png>
-Package pdftex.def Info: PvalueTwoSided.png used on input line 274.
-(pdftex.def)             Requested size: 194.97795pt x 135.00403pt.
-
-Overfull \hbox (17.14575pt too wide) in paragraph at lines 281--281
-[]\OT1/cmr/m/n/12 Calculate the P-value
- []
-
-
-Overfull \hbox (35.3747pt too wide) in paragraph at lines 296--298
-[][][][][][][]
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <./PvalueTwoSided.png>]
-<PvalueOneSide.png, id=35, 584.1825pt x 412.54124pt>
-File: PvalueOneSide.png Graphic file (type png)
- <use PvalueOneSide.png>
-Package pdftex.def Info: PvalueOneSide.png used on input line 308.
-(pdftex.def)             Requested size: 175.25609pt x 123.76332pt.
-
-Overfull \hbox (2.66623pt too wide) in paragraph at lines 315--315
-\OT1/cmr/m/n/12 the ``fair coin'' ex-am-
- []
-
-
-Overfull \hbox (0.12042pt too wide) in paragraph at lines 315--315
-\OT1/cmr/m/n/12 ple, with hy-pothe-ses 
- []
-
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./PvalueOneSide.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 349--349
-
- []
-
-
-Overfull \hbox (35.3747pt too wide) in paragraph at lines 372--373
+[3 <./Chi-squareDistribution.png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 262--263
 [][][][][][][] 
  []
 
@@ -1273,335 +1198,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] <TestStatisticAndPvalue.png, id=46, 1038.88126pt x 214.8025pt>
-File: TestStatisticAndPvalue.png Graphic file (type png)
-
-<use TestStatisticAndPvalue.png>
-Package pdftex.def Info: TestStatisticAndPvalue.png used on input line 388.
-(pdftex.def)             Requested size: 415.54514pt x 85.91946pt.
-
+[4]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./TestStatisticAndPvalue.png>]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-
-Overfull \hbox (4.25143pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/12 When check-ing the
- []
-
-
-Overfull \hbox (7.78929pt too wide) in paragraph at lines 450--451
-\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )$ in-stead of $\OML/cmm/m/it/12 n[]$ \OT1/cm
-r/m/n/12 and
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 457--458
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10] <TypeOneError.png, id=59, 391.96437pt x 296.10625pt>
-File: TypeOneError.png Graphic file (type png)
-
-<use TypeOneError.png>
-Package pdftex.def Info: TypeOneError.png used on input line 470.
-(pdftex.def)             Requested size: 195.9817pt x 148.05275pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 482--483
-[][][][][][][] 
- []
-
-
-Overfull \hbox (13.16777pt too wide) in paragraph at lines 486--487
-\OT1/cmr/m/n/12 ``potato chip'' ex-
- []
-
-
-Overfull \hbox (7.03172pt too wide) in paragraph at lines 486--487
-\OT1/cmr/m/n/12 am-ple in sec-tion
- []
-
-
-Overfull \hbox (14.28839pt too wide) in paragraph at lines 486--487
-\OT1/cmr/m/n/12 2. State the \OT1/cmr/bx/n/12 type
- []
-
-
-Overfull \hbox (3.38486pt too wide) in paragraph at lines 486--487
-\OT1/cmr/bx/n/12 I er-ror \OT1/cmr/m/n/12 and it's
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 502--503
-[][][][][][][] 
- []
-
-<TypeTwoError.png, id=60, 515.9275pt x 332.74312pt>
-File: TypeTwoError.png Graphic file (type png)
- <use TypeTwoError.png>
-Package pdftex.def Info: TypeTwoError.png used on input line 506.
-(pdftex.def)             Requested size: 309.55888pt x 199.6474pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11 <./TypeOneError.png>]
-Overfull \hbox (3.88707pt too wide) in paragraph at lines 517--518
-[]\OT1/cmr/m/n/12 Can you find out
- []
-
-
-Overfull \hbox (12.43837pt too wide) in paragraph at lines 517--518
-\OT1/cmr/m/n/12 the ar-eas that rep-
- []
-
-
-Overfull \hbox (1.13293pt too wide) in paragraph at lines 517--518
-\OT1/cmr/m/n/12 re-sent $\OML/cmm/m/it/12 $ \OT1/cmr/m/n/12 and the
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12 <./TypeTwoError.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 553--554
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 601--602
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16]
-<ExerciseForCheckingConditionsForOneTMean.png, id=84, 465.74pt x 394.47375pt>
-File: ExerciseForCheckingConditionsForOneTMean.png Graphic file (type png)
-
-<use ExerciseForCheckingConditionsForOneTMean.png>
-Package pdftex.def Info: ExerciseForCheckingConditionsForOneTMean.png used on i
-nput line 640.
-(pdftex.def)             Requested size: 279.44615pt x 236.68607pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 640--641
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[17 <./ExerciseForCheckingConditionsForOneTMean.png>]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmtt12!
-Missing character: There is no à in font cmtt12!
-Missing character: There is no í in font cmtt12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 663--664
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ô in font cmr12!
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 675--676
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no à in font cmr12!
-Missing character: There is no í in font cmr12!
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 728--729
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 732--734
-[][][][][][][]
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 741--742
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22] <InvestigationHT.png, id=104, 311.1625pt x 140.525pt>
-File: InvestigationHT.png Graphic file (type png)
-
-<use InvestigationHT.png>
-Package pdftex.def Info: InvestigationHT.png used on input line 778.
-(pdftex.def)             Requested size: 186.69894pt x 84.31564pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 778--779
-[][][][][][][] 
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23 <./InvestigationHT.png>] (Chapter8.aux) ) 
+[5] (Chapter10.aux) ) 
 Here is how much of TeX's memory you used:
- 25270 strings out of 493333
- 511064 string characters out of 3139199
- 552396 words of memory out of 3000000
- 28391 multiletter control sequences out of 15000+200000
- 545327 words of font info for 81 fonts, out of 3000000 for 9000
+ 25182 strings out of 493333
+ 509229 string characters out of 3139199
+ 540346 words of memory out of 3000000
+ 28315 multiletter control sequences out of 15000+200000
+ 539281 words of font info for 56 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 54i,27n,73p,10361b,614s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12
-.pfb>
-Output written on Chapter8.pdf (23 pages, 467569 bytes).
+ 54i,16n,73p,10362b,614s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
+12.pfb>
+Output written on Chapter10.pdf (5 pages, 141007 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

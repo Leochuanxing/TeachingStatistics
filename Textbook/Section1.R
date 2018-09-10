@@ -549,11 +549,39 @@ df_sample_points <- data.frame(sample_points)
 
  # Sampling distribution on significance test
  library(ggplot2)
-ggplot(data.frame(x = c(-3, 3)), aes(x)) + stat_function(fun = dnorm, size = 1)+
+ggplot(data.frame(x = c(-5, 5)), aes(x)) + stat_function(fun = dnorm, size = 1)+
    stat_function(fun = function(x){0}, size = 1) +
    theme(axis.title.y=element_blank(),
          axis.ticks=element_blank(),
          axis.title.x = element_blank(),
          axis.text.x = element_blank())+
-   ylim(0,0.43)
+  ylim(-0.05, 0.43)+
+  annotate(geom = 'text', label =c("paste(p[0])", "Desicion~is~based~on~this", "assumed~sampling~distribution"), x =c(0, 1.5, 1.5), y =c(0, 0.3, 0.2), hjust =c(0, 0, 0), 
+           vjust = c(1.2, 0, -1), parse = TRUE)
 
+ggplot(data.frame(x = c(-5, 5)), aes(x)) + stat_function(fun = dnorm, size = 1)+
+  stat_function(fun = function(x){0}, size = 1) +
+  theme(axis.title.y=element_blank(),
+        axis.ticks=element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.x = element_blank())+
+  ylim(-0.05, 0.43)+
+  annotate(geom = 'text', label =c("paste(p[1])", "Samples~are~drawn~from~this", "real~sampling~distribution"), x =c(0, 1.5, 1.5), y =c(0, 0.3, 0.2), hjust =c(0, 0, 0), 
+           vjust = c(1.2, 0, -1), parse = TRUE)
+  
+# inference for regression line
+library(rgl)
+
+# chi-square distribution
+library(ggplot2)
+ggplot(data.frame(x = c(0, 28)), aes(x)) + stat_function(fun = function(x) dchisq(x, df = 1), size = 1)+
+  stat_function(fun = function(x){0}, size = 1) +
+  stat_function(fun = function(x) dchisq(x, df = 4), size = 1, colour = "green")+
+  stat_function(fun = function(x) dchisq(x, df = 8), size = 1, colour = "red")+
+  stat_function(fun = function(x) dchisq(x, df = 16), size = 1, colour = "blue")+
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_blank())+
+  ylim(0,0.22)+
+  annotate(geom = 'text', label =c("df=1", "df=4", "df=8", "df=16"),
+           x =c(2, 5, 9, 17), y =c(0.21, 0.15, 0.1, 0.075)
+            )
